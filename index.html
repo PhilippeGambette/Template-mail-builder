@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge">??? -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="mail.js" type="module" defer></script>
+    <title>Créer un mail</title>
+</head>
+<body>
+    <h1>Créer un mail</h1>
+    <main>
+        <form action="script.js" method="get">
+            <h2>Information sur le webinaire</h2>
+            <div>
+                <label for="titre">Titre :</label>
+                <input type="text" name="titre" id="titre" placeholder="Publier sur Recherche Data Gouv">
+            </div>
+            <div>
+                <label for="nbRdv">n° du RDV :</label>
+                <input type="number" name="nbRdv" id="nbRdv" min="1">
+            </div>
+            <div>
+                <label for="date">Date :</label>
+                <input type="date" name="date" id="date">
+            </div>
+            <div>
+                <label for="hstart">Heure de début :</label>
+                <input type="time" name="hstart" id="hstart">
+            </div>
+            <div>
+                <label for="hend">Heure de fin :</label>
+                <input type="time" name="hend" id="hend">
+            </div>
+            <div>
+                <label for="text">Texte :</label>
+                <textarea name="text" id="text" cols="30" rows="10"></textarea>
+            </div>
+            <h2>Information sur les intervenants</h2>
+            <div>
+                <label for="nbInterv">Nombre d'intervenants :</label>
+                <input type="number" name="nbInterv" id="nbInterv" min="1">
+            </div>
+            <!-- partie à dupliquer en fonction du nombre d'intervenants -->
+            <div class="intervenants">
+                <h3>Intervenant n°1</h3>
+                <div class="intervenant0">
+                    <label for="nom0">Nom - Prénom:</label>
+                    <input type="text" name="nom0" id="nom0" value="Céline Rousselot">
+                </div>
+                <div>
+                    <label for="linknom0">Lien vers la fiche annuaire :</label>
+                    <input type="text" name="linknom0" id="linknom0" value="">
+                </div>
+                <div>
+                    <label for="fonction0">Fonction et département :</label>
+                    <textarea name="fonction0" id="fonction0" cols="30" rows="10">Chargée de mission gestion et ouverture des données de recherche 
+DSOS</textarea>
+                </div>
+            </div>
+            <!-- fin de la partie à dupliquer -->
+            <!--Liens zoom-->
+            <h2>Réunion zoom</h2>
+            <div>
+                <label for="linkzoom">Lien Zoom :</label>
+                <input type="text" name="linkzoom" id="linkzoom">
+            </div>
+            <div>
+                <label for="idreu">Id de réunion :</label>
+                <input type="text" name="idreu" id="idreu">
+            </div>
+            <div>
+                <label for="mdpreu">Mot de passe de réunion :</label>
+                <input type="text" name="mdpreu" id="mdpreu">
+            </div>
+            <div class="button"><button type="button">Valider</button></div>
+        </form>
+        <div class="view">
+            
+    </main>
+</body>
+</html>
