@@ -19,7 +19,7 @@ nbInterv.addEventListener("change", () => {
             //création du label nom prénom
             let nomLabel = document.createElement("label");
             nomLabel.htmlFor = "nom" + i;
-            nomLabel.innerHTML = "Nom - Prénom:";
+            nomLabel.innerHTML = "Prénom - Nom:";
             containers[i].appendChild(nomLabel);
 
             //création du champs nom prénom
@@ -67,22 +67,26 @@ nbInterv.addEventListener("change", () => {
     });
 });
 
-//récupération des valeurs des champs au clique du bouton
-document.querySelector("form").addEventListener("submit", (e) => {
+modifTemplate = (e) => {
     e.preventDefault(); //permet de prévenir l’envoi du formulaire au serveur.???? what is that?
-    console.log("Titre:", e.target.titre.value);
-    console.log("N°:", e.target.nbRdv.value);
-    console.log("Date:", e.target.date.value);
-    console.log("Heures:", e.target.hstart.value, " à ", e.target.hend.value);
+    console.log(e.target.id, e.target.value);
+
+    document.querySelector("#view-" + e.target.id).innerHTML = e.target.value;
+};
+
+//récupération des valeurs des champs au clique du bouton
+document.querySelectorAll("input,textarea").forEach((input) => {
+    input.addEventListener("keyup", modifTemplate);
+    input.addEventListener("change", modifTemplate);
 });
 
 //bouton copier
-let editor = document.querySelector(".view p");
-let button = document.querySelector(".view button");
+let editor = document.querySelector(".view");
+let button = document.querySelector("button");
 
 button.addEventListener("click", () => {
     console.log(editor);
-    editor.select();
-    navigator.clipboard.writeText(editor.innerHTML);
+    /* editor.select(); */
+    navigator.clipboard.writeText(editor);
     button.innerText = "Copié !";
 });
