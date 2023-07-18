@@ -68,6 +68,21 @@ nbInterv.addEventListener("change", () => {
 });
 
 //récupération des valeurs des champs au clique du bouton
-document.querySelector("button").addEventListener("click", () => {});
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault(); //permet de prévenir l’envoi du formulaire au serveur.???? what is that?
+    console.log("Titre:", e.target.titre.value);
+    console.log("N°:", e.target.nbRdv.value);
+    console.log("Date:", e.target.date.value);
+    console.log("Heures:", e.target.hstart.value, " à ", e.target.hend.value);
+});
 
-document.querySelector(".view").innerHTML = html;
+//bouton copier
+let editor = document.querySelector(".view p");
+let button = document.querySelector(".view button");
+
+button.addEventListener("click", () => {
+    console.log(editor);
+    editor.select();
+    navigator.clipboard.writeText(editor.innerHTML);
+    button.innerText = "Copié !";
+});
