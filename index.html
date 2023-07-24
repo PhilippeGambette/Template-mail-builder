@@ -40,23 +40,25 @@
             <h2>Information sur les intervenants</h2>
             <div>
                 <label for="nbInterv">Nombre d'intervenants :</label>
-                <input type="number" name="nbInterv" id="nbInterv" min="1" max="5">
+                <input type="number" name="nbInterv" id="nbInterv" min="1" max="5" value="3">
             </div>
             <!-- partie à dupliquer en fonction du nombre d'intervenants -->
             <div class="intervenants">
-                <h3>Intervenant n°1</h3>
-                <div class="intervenant0">
-                    <label for="nom0">Prénom - Nom:</label>
-                    <input type="text" name="nom0" id="nom0" placeholder="Arthur">
-                </div>
-                <div>
-                    <label for="linknom0">Lien vers la fiche annuaire :</label>
-                    <input type="text" name="linknom0" id="linknom0" placeholder="https://annuaire.fr/page-arthurlutte">
-                </div>
-                <div>
-                    <label for="fonction0">Fonction et département :</label>
-                    <textarea name="fonction0" id="fonction0" cols="30" rows="10"></textarea>
-                </div>
+                <!-- <div class="intervenant0 intervContainer">
+                    <h3>Intervenant n°1</h3>
+                    <div>
+                        <label for="nom0">Prénom - Nom:</label>
+                        <input type="text" name="nom0" id="nom0" placeholder="Arthur">
+                    </div>
+                    <div>
+                        <label for="linknom0">Lien vers la fiche annuaire :</label>
+                        <input type="text" name="linknom0" id="linknom0" placeholder="https://annuaire.fr/page-arthurlutte">
+                    </div>
+                    <div>
+                        <label for="fonction0">Fonction et département :</label>
+                        <textarea name="fonction0" id="fonction0" cols="30" rows="10"></textarea>
+                    </div>
+                </div> -->
             </div>
             <!-- fin de la partie à dupliquer -->
             <!--Liens zoom-->
@@ -114,7 +116,7 @@
 <table class="container" style="width: 620px;" width="620" cellspacing="0" cellpadding="0" border="0">
 <tbody>
 <tr>
-<td style="border-bottom: solid 1px #eeeeee; padding: 35px 0 18px 0; font-size: 26px;" align="left"><!--StartFragment--><span style="white-space: pre-wrap;"><strong>Le 3 juillet de 13h &agrave; 13h45 en visio</strong><br /><span style="font-size: 18pt;">Organis&eacute; par l&rsquo;Atelier Data Univ Eiffel</span></span><!--EndFragment--></td>
+<td style="border-bottom: solid 1px #eeeeee; padding: 35px 0 18px 0; font-size: 26px;" align="left"><!--StartFragment--><span style="white-space: pre-wrap;"><strong>Le <span id="view-date">3 juillet</span> de <span id="view-hstart">13h</span> &agrave; <span id="view-hend">13h45</span> en visio</strong><br /><span style="font-size: 18pt;">Organis&eacute; par l&rsquo;Atelier Data Univ Eiffel</span></span><!--EndFragment--></td>
 </tr>
 </tbody>
 </table>
@@ -133,7 +135,7 @@
 <td class="paragraph-block__content" style="padding: 25px 0 18px 0; font-size: 16px; line-height: 27px; color: #444444;" align="left">
 <div><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg" style="width: 620px;" /></div>
 <div></div>
-<div><a href="https://entrepot.recherche.data.gouv.fr/dataverse/univ-gustave-eiffel">L&rsquo;entrep&ocirc;t pluridisciplinaire Recherche Data Gouv</a> est une solution nationale souveraine pour le partage et l&rsquo;ouverture des donn&eacute;es de recherche. Inaugur&eacute; il y a un an, la mise en place de cet entrep&ocirc;t figurait dans les mesures phares du 2&egrave;me plan national pour la science ouverte. L&rsquo;Universit&eacute; Gustave Eiffel dispose d&rsquo;un espace institutionnel sur cet entrep&ocirc;t depuis quelques mois. Ce 1er RDV DATA sera l&rsquo;occasion de vous pr&eacute;senter cet entrep&ocirc;t et comment d&eacute;poser un jeu de donn&eacute;es. Deux coll&egrave;gues ayant publi&eacute; leurs donn&eacute;es sur cet entrep&ocirc;t nous feront part de leur retour d&rsquo;exp&eacute;rience.</div>
+<div><span id="view-text"><a href="https://entrepot.recherche.data.gouv.fr/dataverse/univ-gustave-eiffel">L&rsquo;entrep&ocirc;t pluridisciplinaire Recherche Data Gouv</a> est une solution nationale souveraine pour le partage et l&rsquo;ouverture des donn&eacute;es de recherche. Inaugur&eacute; il y a un an, la mise en place de cet entrep&ocirc;t figurait dans les mesures phares du 2&egrave;me plan national pour la science ouverte. L&rsquo;Universit&eacute; Gustave Eiffel dispose d&rsquo;un espace institutionnel sur cet entrep&ocirc;t depuis quelques mois. Ce 1er RDV DATA sera l&rsquo;occasion de vous pr&eacute;senter cet entrep&ocirc;t et comment d&eacute;poser un jeu de donn&eacute;es. Deux coll&egrave;gues ayant publi&eacute; leurs donn&eacute;es sur cet entrep&ocirc;t nous feront part de leur retour d&rsquo;exp&eacute;rience.</span></div>
 </td>
 </tr>
 <tr>
@@ -163,7 +165,7 @@
 <tr>
 <td class="cta-block__button" style="width: 300px;" width="330" align="center">
 <p align="center"><a href="https://univ-eiffel.zoom.us/j/89609731949" style="color: white; background-color: #2f2a85; padding: 10px 60px; border-radius: 10px; font-weight: bold;">Lien Zoom</a></p>
-<p style="color: #2f2a85;" align="center">ID de r&eacute;union : 896 0973 1949 <br />Mot de passe: RdvD4t4RDG</p>
+<p style="color: #2f2a85;" align="center">ID de r&eacute;union : <span id="view-idreu">896 0973 1949</span> <br />Mot de passe: <span id="view-mdpreu">RdvD4t4RDG</span></p>
 </td>
 </tr>
 </tbody>
