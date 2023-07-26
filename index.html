@@ -15,27 +15,27 @@
             <h2>Information sur le webinaire</h2>
             <div>
                 <label for="titre">Titre :</label>
-                <input type="text" name="titre" id="titre" placeholder="Publier sur Recherche Data Gouv">
+                <input type="text" name="titre" id="titre" class="event-target" value="Publier sur Recherche Data Gouv">
             </div>
             <div>
                 <label for="nbRdv">n° du RDV :</label>
-                <input type="number" name="nbRdv" id="nbRdv" min="1">
+                <input type="number" name="nbRdv" id="nbRdv" class="event-target" min="1" value="1">
             </div>
             <div>
                 <label for="date">Date :</label>
-                <input type="date" name="date" id="date">
+                <input type="date" name="date" id="date" class="event-target" value="2023-07-13">
             </div>
             <div>
                 <label for="hstart">Heure de début :</label>
-                <input type="time" name="hstart" id="hstart">
+                <input type="time" name="hstart" id="hstart" class="event-target" value="13:00">
             </div>
             <div>
                 <label for="hend">Heure de fin :</label>
-                <input type="time" name="hend" id="hend">
+                <input type="time" name="hend" id="hend" class="event-target" value="13:45">
             </div>
             <div>
                 <label for="text">Texte :</label>
-                <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                <textarea name="text" id="text" class="event-target" cols="30" rows="10"><a href="https://entrepot.recherche.data.gouv.fr/dataverse/univ-gustave-eiffel">L&rsquo;entrep&ocirc;t pluridisciplinaire Recherche Data Gouv</a> est une solution nationale souveraine pour le partage et l&rsquo;ouverture des donn&eacute;es de recherche. Inaugur&eacute; il y a un an, la mise en place de cet entrep&ocirc;t figurait dans les mesures phares du 2&egrave;me plan national pour la science ouverte. L&rsquo;Universit&eacute; Gustave Eiffel dispose d&rsquo;un espace institutionnel sur cet entrep&ocirc;t depuis quelques mois. Ce 1er RDV DATA sera l&rsquo;occasion de vous pr&eacute;senter cet entrep&ocirc;t et comment d&eacute;poser un jeu de donn&eacute;es. Deux coll&egrave;gues ayant publi&eacute; leurs donn&eacute;es sur cet entrep&ocirc;t nous feront part de leur retour d&rsquo;exp&eacute;rience.</textarea>
             </div>
             <h2>Information sur les intervenants</h2>
             <div>
@@ -65,15 +65,15 @@
             <h2>Réunion zoom</h2>
             <div>
                 <label for="linkzoom">Lien Zoom :</label>
-                <input type="text" name="linkzoom" id="linkzoom">
+                <input type="text" name="linkzoom" id="linkzoom" class="event-target" value="https://univ-eiffel.zoom.us/j/89609731949">
             </div>
             <div>
                 <label for="idreu">Id de réunion :</label>
-                <input type="text" name="idreu" id="idreu">
+                <input type="text" name="idreu" id="idreu" class="event-target" value="896 0973 1949" >
             </div>
             <div>
                 <label for="mdpreu">Mot de passe de réunion :</label>
-                <input type="text" name="mdpreu" id="mdpreu">
+                <input type="text" name="mdpreu" id="mdpreu" class="event-target" value="RdvD4t4RDG">
             </div>
             <!-- <div class="button"><button type="submit">Valider</button></div> -->
         </form>
@@ -104,7 +104,7 @@
 <table class="container hero-subheader" style="width: 620px;" width="620" cellspacing="0" cellpadding="0" border="0">
 <tbody>
 <tr>
-<td class="hero-subheader__title" style="font-size: 40px; font-weight: bold; color: #ffffff; padding: 80px 15px 15px 15px; background-color: #000000;" background="https://www.univ-gustave-eiffel.fr/fileadmin/common/generateurs/fond.png" align="left"><!--StartFragment--><span style="white-space: pre-wrap;"><span style="font-size: 24pt;">Rendez-vous DATA n&deg;<span id="view-nbRdv">1</span></span><br /><span id="view-titre">Publier sur Recherche Data Gouv</span></span><!--EndFragment--></td>
+<td class="hero-subheader__title" style="font-size: 40px; font-weight: bold; color: #ffffff; padding: 80px 15px 15px 15px; background-color: #000000;" background="https://www.univ-gustave-eiffel.fr/fileadmin/common/generateurs/fond.png" align="left"><!--StartFragment--><span style="white-space: pre-wrap;"><span style="font-size: 24pt;">Rendez-vous DATA n&deg;<span id="view-nbRdv"></span></span><br /><span id="view-titre"></span></span><!--EndFragment--></td>
 </tr>
 </tbody>
 </table>
@@ -116,7 +116,7 @@
 <table class="container" style="width: 620px;" width="620" cellspacing="0" cellpadding="0" border="0">
 <tbody>
 <tr>
-<td style="border-bottom: solid 1px #eeeeee; padding: 35px 0 18px 0; font-size: 26px;" align="left"><!--StartFragment--><span style="white-space: pre-wrap;"><strong>Le <span id="view-date">3 juillet</span> de <span id="view-hstart">13h</span> &agrave; <span id="view-hend">13h45</span> en visio</strong><br /><span style="font-size: 18pt;">Organis&eacute; par l&rsquo;Atelier Data Univ Eiffel</span></span><!--EndFragment--></td>
+<td style="border-bottom: solid 1px #eeeeee; padding: 35px 0 18px 0; font-size: 26px;" align="left"><!--StartFragment--><span style="white-space: pre-wrap;"><strong>Le <span id="view-date"></span> de <span id="view-hstart"></span> &agrave; <span id="view-hend"></span> en visio</strong><br /><span style="font-size: 18pt;">Organis&eacute; par l&rsquo;Atelier Data Univ Eiffel</span></span><!--EndFragment--></td>
 </tr>
 </tbody>
 </table>
@@ -135,22 +135,22 @@
 <td class="paragraph-block__content" style="padding: 25px 0 18px 0; font-size: 16px; line-height: 27px; color: #444444;" align="left">
 <div><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg" style="width: 620px;" /></div>
 <div></div>
-<div><span id="view-text"><a href="https://entrepot.recherche.data.gouv.fr/dataverse/univ-gustave-eiffel">L&rsquo;entrep&ocirc;t pluridisciplinaire Recherche Data Gouv</a> est une solution nationale souveraine pour le partage et l&rsquo;ouverture des donn&eacute;es de recherche. Inaugur&eacute; il y a un an, la mise en place de cet entrep&ocirc;t figurait dans les mesures phares du 2&egrave;me plan national pour la science ouverte. L&rsquo;Universit&eacute; Gustave Eiffel dispose d&rsquo;un espace institutionnel sur cet entrep&ocirc;t depuis quelques mois. Ce 1er RDV DATA sera l&rsquo;occasion de vous pr&eacute;senter cet entrep&ocirc;t et comment d&eacute;poser un jeu de donn&eacute;es. Deux coll&egrave;gues ayant publi&eacute; leurs donn&eacute;es sur cet entrep&ocirc;t nous feront part de leur retour d&rsquo;exp&eacute;rience.</span></div>
+<div><span id="view-text"></span></div>
 </td>
 </tr>
 <tr>
 <td style="padding: 25px 0px 18px; font-size: 16px; line-height: 27px; color: #444444;">
 <h2 style="text-align: center; margin-top: 5%; margin-bottom: 4%;">Les intervenants</h2>
-<div class="container" style="display: flex;">
-<div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
-<p><strong> <a href="https://pagespro.univ-gustave-eiffel.fr/celine-rousselot">C&eacute;line Rousselot</a></strong><br />Charg&eacute;e de mission gestion et ouverture des donn&eacute;es de recherche <br />DSOS</p>
+<div class="container" id="intervenants" style="display: flex; flex-wrap: wrap;">
+<!-- <div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
+<p><strong> <a href="https://pagespro.univ-gustave-eiffel.fr/celine-rousselot"><span id="view-nom0">C&eacute;line Rousselot</span id="view-linknom1"></a></strong><br /><span id="view-fonction0">Charg&eacute;e de mission gestion et ouverture des donn&eacute;es de recherche <br />DSOS</span></p>
 </div>
 <div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
-<p><strong><a href="https://pagespro.univ-gustave-eiffel.fr/fabrice-vienne">Fabrice Vienne</a></strong><br />Chef de projets num&eacute;riques <br />PICS-L</p>
+<p><strong><a href="https://pagespro.univ-gustave-eiffel.fr/fabrice-vienne"><span id="view-nom1">Fabrice Vienne</a></strong><br /><span>Chef de projets num&eacute;riques <br />PICS-L</span></p>
 </div>
 <div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
 <p><strong><a href="https://pagespro.univ-gustave-eiffel.fr/sebastien-brisard">S&eacute;bastien Brisard</a></strong><br />Chercheur en science des mat&eacute;riaux <br />Navier</p>
-</div>
+</div> -->
 </div>
 </td>
 </tr>
@@ -164,8 +164,8 @@
 <tbody>
 <tr>
 <td class="cta-block__button" style="width: 300px;" width="330" align="center">
-<p align="center"><a href="https://univ-eiffel.zoom.us/j/89609731949" style="color: white; background-color: #2f2a85; padding: 10px 60px; border-radius: 10px; font-weight: bold;">Lien Zoom</a></p>
-<p style="color: #2f2a85;" align="center">ID de r&eacute;union : <span id="view-idreu">896 0973 1949</span> <br />Mot de passe: <span id="view-mdpreu">RdvD4t4RDG</span></p>
+<p align="center"><a href="" id="view-linkzoom" style="color: white; background-color: #2f2a85; padding: 10px 60px; border-radius: 10px; font-weight: bold;">Lien Zoom</a></p>
+<p style="color: #2f2a85;" align="center">ID de r&eacute;union : <span id="view-idreu"></span> <br />Mot de passe: <span id="view-mdpreu"></span></p>
 </td>
 </tr>
 </tbody>
