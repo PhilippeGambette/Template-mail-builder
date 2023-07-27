@@ -6,6 +6,7 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge">??? -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="img/icon-48.png" type="image/x-icon">
     <title>Créer un mail</title>
 </head>
 <body>
@@ -34,6 +35,10 @@
                 <input type="time" name="hend" id="hend" class="event-target" value="13:45">
             </div>
             <div>
+                <label for="main-image">Image :</label>
+                <input type="url" name="main-image" id="main-image" class="event-target" value="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg">
+            </div>
+            <div>
                 <label for="text">Texte :</label>
                 <textarea name="text" id="text" class="event-target" cols="30" rows="10"><a href="https://entrepot.recherche.data.gouv.fr/dataverse/univ-gustave-eiffel">L&rsquo;entrep&ocirc;t pluridisciplinaire Recherche Data Gouv</a> est une solution nationale souveraine pour le partage et l&rsquo;ouverture des donn&eacute;es de recherche. Inaugur&eacute; il y a un an, la mise en place de cet entrep&ocirc;t figurait dans les mesures phares du 2&egrave;me plan national pour la science ouverte. L&rsquo;Universit&eacute; Gustave Eiffel dispose d&rsquo;un espace institutionnel sur cet entrep&ocirc;t depuis quelques mois. Ce 1er RDV DATA sera l&rsquo;occasion de vous pr&eacute;senter cet entrep&ocirc;t et comment d&eacute;poser un jeu de donn&eacute;es. Deux coll&egrave;gues ayant publi&eacute; leurs donn&eacute;es sur cet entrep&ocirc;t nous feront part de leur retour d&rsquo;exp&eacute;rience.</textarea>
             </div>
@@ -44,21 +49,6 @@
             </div>
             <!-- partie à dupliquer en fonction du nombre d'intervenants -->
             <div class="intervenants">
-                <!-- <div class="intervenant0 intervContainer">
-                    <h3>Intervenant n°1</h3>
-                    <div>
-                        <label for="nom0">Prénom - Nom:</label>
-                        <input type="text" name="nom0" id="nom0" placeholder="Arthur">
-                    </div>
-                    <div>
-                        <label for="linknom0">Lien vers la fiche annuaire :</label>
-                        <input type="text" name="linknom0" id="linknom0" placeholder="https://annuaire.fr/page-arthurlutte">
-                    </div>
-                    <div>
-                        <label for="fonction0">Fonction et département :</label>
-                        <textarea name="fonction0" id="fonction0" cols="30" rows="10"></textarea>
-                    </div>
-                </div> -->
             </div>
             <!-- fin de la partie à dupliquer -->
             <!--Liens zoom-->
@@ -133,7 +123,7 @@
 <tbody>
 <tr>
 <td class="paragraph-block__content" style="padding: 25px 0 18px 0; font-size: 16px; line-height: 27px; color: #444444;" align="left">
-<div><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg" style="width: 620px;" /></div>
+<div><img id="view-main-image" src="" style="width: 620px;" /></div>
 <div></div>
 <div><span id="view-text"></span></div>
 </td>
@@ -142,15 +132,6 @@
 <td style="padding: 25px 0px 18px; font-size: 16px; line-height: 27px; color: #444444;">
 <h2 style="text-align: center; margin-top: 5%; margin-bottom: 4%;">Les intervenants</h2>
 <div class="container" id="intervenants" style="display: flex; flex-wrap: wrap;">
-<!-- <div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
-<p><strong> <a href="https://pagespro.univ-gustave-eiffel.fr/celine-rousselot"><span id="view-nom0">C&eacute;line Rousselot</span id="view-linknom1"></a></strong><br /><span id="view-fonction0">Charg&eacute;e de mission gestion et ouverture des donn&eacute;es de recherche <br />DSOS</span></p>
-</div>
-<div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
-<p><strong><a href="https://pagespro.univ-gustave-eiffel.fr/fabrice-vienne"><span id="view-nom1">Fabrice Vienne</a></strong><br /><span>Chef de projets num&eacute;riques <br />PICS-L</span></p>
-</div>
-<div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
-<p><strong><a href="https://pagespro.univ-gustave-eiffel.fr/sebastien-brisard">S&eacute;bastien Brisard</a></strong><br />Chercheur en science des mat&eacute;riaux <br />Navier</p>
-</div> -->
 </div>
 </td>
 </tr>
@@ -211,7 +192,7 @@
 <tbody>
 <tr>
 <td class="info-bullets__content"><hr style="height: 4px; background-color: #2f2a85;" size="4px" color="#2F2A85" /><footer style="padding-top: 4%;">
-<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0px; gap: 45px;"><img src="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.svg" alt="" style="width: 100px;" /> <img src="https://s3.fr-par.scw.cloud/rdg-portal/logos-centres-ressources/recherche-data-gouv.png" alt="" style="height: 46px; width: auto;" /> <img src="https://www.ouvrirlascience.fr/wp-content/themes/coso2021/images/logo-noir-2022.svg" alt="" style="width: 100px;" /> <img src="https://outicom.univ-eiffel.fr/pub/generateurs/img/1.png" alt="" style="width: 100px;" /></div>
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0px; gap: 45px;"><a href="https://www.enseignementsup-recherche.gouv.fr/"><img src="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.svg" alt="" style="width: 100px;" /></a> <a href="https://recherche.data.gouv.fr/fr"><img src="https://s3.fr-par.scw.cloud/rdg-portal/logos-centres-ressources/recherche-data-gouv.png" alt="" style="height: 46px; width: auto;" /></a> <a href="https://www.ouvrirlascience.fr/"><img src="https://www.ouvrirlascience.fr/wp-content/themes/coso2021/images/logo-noir-2022.svg" alt="" style="width: 100px;" /></a> <a href="https://www.univ-gustave-eiffel.fr/"><img src="https://outicom.univ-eiffel.fr/pub/generateurs/img/1.png" alt="" style="width: 100px;" /></a></div>
 </footer></td>
 </tr>
 </tbody>
@@ -251,7 +232,11 @@
 
             
         </div>
-            <div class="copy"><button type="button">Copier</button></div>
+            <div ><button type="button" class="copy">Copier</button></div>
     </main>
+    <footer class="footer">
+        <h2>Mentions légales</h2>
+
+    </footer>
 </body>
 </html>

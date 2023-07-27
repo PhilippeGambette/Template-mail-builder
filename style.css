@@ -18,48 +18,54 @@ main{
 form {
     padding: 1em;
     background-color: #ddd;
-  }
+}
   
-  form div + div {
+form div + div {
     margin-top: 1em;
-  }
+}
   
-  label {
+label {
     display:block;
     padding-left: 10px;
-  }
+}
   
-  input, textarea {
+input, textarea {
     font-size: 1em;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     box-sizing: border-box;
-  
-    /* Pour harmoniser le look & feel des bordures des champs texte */
     border: 1px solid #999999;
-  }
+}
   
-  input:focus, textarea:focus {
-    /* Pour souligner légèrement les éléments actifs */
+input:focus, textarea:focus {
     border-color: #000;
-  }
+}
   
-  textarea {
-    /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+textarea {
     vertical-align: top;
-  
-    /* Pour donner assez de place pour écrire du texte */
     height: 5em;
-  }
+}
   
-  .button {
-    /* Pour placer le bouton à la même position que les champs texte */
-    padding-left: 90px; /* même taille que les étiquettes */
-  }
+.button {
+    padding-left: 90px;
+}
   
-  button {
-    /* Cette marge supplémentaire représente grosso modo le même espace que celui
-       entre les étiquettes et les champs texte */
+button {
     margin-left: .5em;
-  }
-  
+}
+
+.copy{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px 7px;
+}
+footer.footer {
+	text-align: center;
+    color: white;
+    background-color: #2F2A85;
+	padding: 20px;
+}
+footer h2{
+	margin: 0;
+}

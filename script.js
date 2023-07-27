@@ -103,6 +103,7 @@ testId = (id) => {
         return false;
     }
 };
+
 modifField = (e) => {
     modifTemplate(e.target.id);
     if (e.target.id === "nom1") {
