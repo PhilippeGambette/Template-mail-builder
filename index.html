@@ -35,8 +35,8 @@
                 <input type="time" name="hend" id="hend" class="event-target" value="13:45">
             </div>
             <div>
-                <label for="main-image">Image :</label>
-                <input type="url" name="main-image" id="main-image" class="event-target" value="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg">
+                <label for="img-main">Image :</label>
+                <input type="url" name="img-main" id="img-main" class="event-target" value="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg">
             </div>
             <div>
                 <label for="text">Texte :</label>
@@ -47,10 +47,8 @@
                 <label for="nbInterv">Nombre d'intervenants :</label>
                 <input type="number" name="nbInterv" id="nbInterv" min="1" max="5" value="3">
             </div>
-            <!-- partie à dupliquer en fonction du nombre d'intervenants -->
             <div class="intervenants">
             </div>
-            <!-- fin de la partie à dupliquer -->
             <!--Liens zoom-->
             <h2>Réunion zoom</h2>
             <div>
@@ -65,7 +63,44 @@
                 <label for="mdpreu">Mot de passe de réunion :</label>
                 <input type="text" name="mdpreu" id="mdpreu" class="event-target" value="RdvD4t4RDG">
             </div>
-            <!-- <div class="button"><button type="submit">Valider</button></div> -->
+            <div>
+                <details>
+                    <summary>Modifier les liens "Pour en savoir plus"</summary>
+                    <div>
+                        <label for="textplus">Text :</label>
+                        <input type="text" name="textplus" id="textplus" class="event-target" value="Sur l&rsquo;Atelier Data Univ Eiffel :">
+                    </div>
+                    <div>
+                        <label for="linkplus">Lien :</label>
+                        <input type="url" name="linkplus" id="linkplus" class="event-target" value="https://recherche.data.gouv.fr/fr/page/data-univ-eiffel-atelier-data-universite-gustave-eiffel">
+                    </div>
+                    <div>
+                        <label for="img-macaron">Lien Macaron :</label>
+                        <input type="url" name="img-macaron" id="img-macaron" class="event-target" value="">
+                    </div>
+                </details>
+            </div>
+            <div>
+                <details>
+                    <summary>Modifier les logos</summary>
+                    <div>
+                        <label for="logo-mesr">Logo Ministère :</label>
+                        <input type="url" name="logo-mesr" id="logo-mesr" class="event-target" value="">
+                    </div>
+                    <div>
+                        <label for="logo-rdg">Logo recherche.data.gouv :</label>
+                        <input type="url" name="logo-rdg" id="logo-rdg" class="event-target" value="">
+                    </div>
+                    <div>
+                        <label for="logo-ols">Logo Ouvrir la science :</label>
+                        <input type="url" name="logo-ols" id="logo-ols" class="event-target" value="">
+                    </div>
+                    <div>
+                        <label for="logo-uge">Logo Gustave Eiffel :</label>
+                        <input type="url" name="logo-uge" id="logo-uge" class="event-target" value="">
+                    </div>
+                </details>
+            </div>
         </form>
         <div class="view">
             <div></div>
@@ -123,7 +158,7 @@
 <tbody>
 <tr>
 <td class="paragraph-block__content" style="padding: 25px 0 18px 0; font-size: 16px; line-height: 27px; color: #444444;" align="left">
-<div><img id="view-main-image" src="" style="width: 620px;" /></div>
+<div><img id="view-img-main" src="" style="width: 620px;" /></div>
 <div></div>
 <div><span id="view-text"></span></div>
 </td>
@@ -132,6 +167,7 @@
 <td style="padding: 25px 0px 18px; font-size: 16px; line-height: 27px; color: #444444;">
 <h2 style="text-align: center; margin-top: 5%; margin-bottom: 4%;">Les intervenants</h2>
 <div class="container" id="intervenants" style="display: flex; flex-wrap: wrap;">
+    <span></span>
 </div>
 </td>
 </tr>
@@ -165,8 +201,8 @@
 <tr>
 <td>
 <h2 style="text-align: center; margin-top: 5%; margin-bottom: 4%;">Pour en savoir plus</h2>
-<div><img alt="" style="width: 15%; float: left;" dfsrc="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg" src="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg" saveddisplaymode="" />
-<p style="padding-top: 3%;">Sur l&rsquo;Atelier Data Univ Eiffel :<br /><span class="Object" id="OBJ_PREFIX_DWT614_com_zimbra_url"><span class="Object" id="OBJ_PREFIX_DWT623_com_zimbra_url"><span class="Object" role="link" id="OBJ_PREFIX_DWT259_com_zimbra_url"><span class="Object" role="link" id="OBJ_PREFIX_DWT268_com_zimbra_url"><a href="https://recherche.data.gouv.fr/fr/page/data-univ-eiffel-atelier-data-universite-gustave-eiffel" target="_blank" rel="noopener">https://recherche.data.gouv.fr/fr/page/data-univ-eiffel-atelier-data-universite-gustave-eiffel</a></span></span></span></span></p>
+<div><img id="view-img-macaron" alt="" style="width: 15%; float: left;" dfsrc="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg" src="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg" saveddisplaymode="" />
+<p style="padding-top: 3%;" id="view-textplus"><br /><span class="Object" id="OBJ_PREFIX_DWT614_com_zimbra_url"><span class="Object" id="OBJ_PREFIX_DWT623_com_zimbra_url"><span class="Object" role="link" id="OBJ_PREFIX_DWT259_com_zimbra_url"><span class="Object" role="link" id="OBJ_PREFIX_DWT268_com_zimbra_url"><a id="view-linkplus" href="" target="_blank" rel="noopener"></a></span></span></span></span></p>
 </div>
 </td>
 </tr>

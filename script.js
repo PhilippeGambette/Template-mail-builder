@@ -55,7 +55,7 @@ nbInterv.addEventListener("change", () => {
                 i +
                 `"></span></p>
             </div>`;
-            document.querySelector("#intervenants").innerHTML += newIntervView;
+            document.querySelector("#intervenants").outerHTML += newIntervView;
             document
                 .querySelector("#nom" + i)
                 .addEventListener("keyup", modifField);
