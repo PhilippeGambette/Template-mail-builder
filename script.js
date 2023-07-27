@@ -55,13 +55,7 @@ nbInterv.addEventListener("change", () => {
                 i +
                 `"></span></p>
             </div>`;
-            document.querySelector("#intervenants").outerHTML += newIntervView;
-            document
-                .querySelector("#nom" + i)
-                .addEventListener("keyup", modifField);
-            document
-                .querySelector("#nom" + i)
-                .addEventListener("change", modifField);
+            document.querySelector("#intervenants").innerHTML += newIntervView;
         }
     }
     //masquage et affichage des champs dans le formulaire
@@ -75,6 +69,12 @@ nbInterv.addEventListener("change", () => {
             //réafichage les champs en plus
             if (index < nbInterv.value) {
                 container.style.display = "block";
+                document
+                    .querySelector("#nom" + index)
+                    .addEventListener("keyup", modifField);
+                document
+                    .querySelector("#nom" + index)
+                    .addEventListener("change", modifField);
             }
         });
     //masquage et affichage des éléments dans le corps du mail
@@ -148,9 +148,15 @@ modifTemplate = (id) => {
         stringAdd = valeur.replace(":", "h");
     }
     //liens
-    if (testId(id)) {
+    if (id.substring(0, 4) === "link") {
         document.getElementById("view-" + id).href = valeur;
-    } else {
+    }
+    //images
+    else if (id.substring(0, 3) === "img") {
+        document.getElementById("view-" + id).src = valeur;
+    }
+    //cas général
+    else {
         document.querySelector("#view-" + id).innerHTML = stringAdd;
     }
 };
