@@ -46,10 +46,6 @@
                 <input type="url" name="img-main" id="img-main" class="event-target" value="http://besombes.butmmi.o2switch.site/rdv_data_dsos/stock-image-195683904-L-v2.jpg">
             </div>
             <div id="editor"></div>
-            <!-- <div>
-                <label for="text">Texte :</label>
-                <textarea name="text" id="text" class="event-target" cols="30" rows="10"><a href="https://entrepot.recherche.data.gouv.fr/dataverse/univ-gustave-eiffel">L&rsquo;entrep&ocirc;t pluridisciplinaire Recherche Data Gouv</a> est une solution nationale souveraine pour le partage et l&rsquo;ouverture des donn&eacute;es de recherche. Inaugur&eacute; il y a un an, la mise en place de cet entrep&ocirc;t figurait dans les mesures phares du 2&egrave;me plan national pour la science ouverte. L&rsquo;Universit&eacute; Gustave Eiffel dispose d&rsquo;un espace institutionnel sur cet entrep&ocirc;t depuis quelques mois. Ce 1er RDV DATA sera l&rsquo;occasion de vous pr&eacute;senter cet entrep&ocirc;t et comment d&eacute;poser un jeu de donn&eacute;es. Deux coll&egrave;gues ayant publi&eacute; leurs donn&eacute;es sur cet entrep&ocirc;t nous feront part de leur retour d&rsquo;exp&eacute;rience.</textarea>
-            </div> -->
             <h2>Information sur les intervenants</h2>
             <div>
                 <label for="nbInterv">Nombre d'intervenants :</label>
@@ -71,7 +67,7 @@
                 <label for="mdpreu">Mot de passe de réunion :</label>
                 <input type="text" name="mdpreu" id="mdpreu" class="event-target" value="RdvD4t4RDG">
             </div>
-            <!-- <div>
+            <div>
                 <details>
                     <summary>Modifier les liens "Pour en savoir plus"</summary>
                     <div>
@@ -79,12 +75,16 @@
                         <input type="text" name="textplus" id="textplus" class="event-target" value="Sur l&rsquo;Atelier Data Univ Eiffel :">
                     </div>
                     <div>
+                        <label for="imgmacaron">Lien Macaron :</label>
+                        <input type="url" name="imgmacaron" id="imgmacaron" class="event-target" value="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg">
+                    </div>
+                    <div>
                         <label for="linkplus">Lien :</label>
                         <input type="url" name="linkplus" id="linkplus" class="event-target" value="https://recherche.data.gouv.fr/fr/page/data-univ-eiffel-atelier-data-universite-gustave-eiffel">
                     </div>
                     <div>
-                        <label for="img-macaron">Lien Macaron :</label>
-                        <input type="url" name="img-macaron" id="img-macaron" class="event-target" value="">
+                        <label for="plus-textlink">Texte du lien :</label>
+                        <input type="text" name="plus-textlink" id="plus-textlink" class="event-target" value="https://recherche.data.gouv.fr/fr/page/data-univ-eiffel-atelier-data-universite-gustave-eiffel">
                     </div>
                 </details>
             </div>
@@ -92,23 +92,47 @@
                 <details>
                     <summary>Modifier les logos</summary>
                     <div>
-                        <label for="logo-mesr">Logo Ministère :</label>
-                        <input type="url" name="logo-mesr" id="logo-mesr" class="event-target" value="">
+                        <div>
+                            <label for="img-mesr">Lien image Ministère :</label>
+                            <input type="url" name="img-mesr" id="img-mesr" class="event-target" value="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.svg">
+                        </div>
+                        <div>
+                            <label for="link-mesr">Lien Ministère :</label>
+                            <input type="text" name="link-mesr" id="link-mesr" class="event-target" value="https://www.enseignementsup-recherche.gouv.fr/">
+                        </div>
                     </div>
                     <div>
-                        <label for="logo-rdg">Logo recherche.data.gouv :</label>
-                        <input type="url" name="logo-rdg" id="logo-rdg" class="event-target" value="">
+                        <div>
+                            <label for="img-rdg">Liens image recherche.data.gouv :</label>
+                            <input type="url" name="img-rdg" id="img-rdg" class="event-target" value="https://s3.fr-par.scw.cloud/rdg-portal/logos-centres-ressources/recherche-data-gouv.png">
+                        </div>
+                        <div>
+                            <label for="link-rdg">Lien recherche.data.gouv :</label>
+                            <input type="text" name="link-rdg" id="link-rdg" class="event-target" value="https://recherche.data.gouv.fr/fr">
+                        </div>
                     </div>
                     <div>
-                        <label for="logo-ols">Logo Ouvrir la science :</label>
-                        <input type="url" name="logo-ols" id="logo-ols" class="event-target" value="">
+                        <div>
+                            <label for="img-ols">Lien image Ouvrir la science :</label>
+                            <input type="url" name="img-ols" id="img-ols" class="event-target" value="https://www.ouvrirlascience.fr/wp-content/themes/coso2021/images/logo-noir-2022.svg">
+                        </div>
+                        <div>
+                            <label for="link-ols">Lien Ouvrir la science :</label>
+                            <input type="text" name="link-ols" id="link-ols" class="event-target" value="https://www.ouvrirlascience.fr/">
+                        </div>
                     </div>
                     <div>
-                        <label for="logo-uge">Logo Gustave Eiffel :</label>
-                        <input type="url" name="logo-uge" id="logo-uge" class="event-target" value="">
+                        <div>
+                            <label for="img-uge">Lien image Gustave Eiffel :</label>
+                            <input type="url" name="img-uge" id="img-uge" class="event-target" value="https://outicom.univ-eiffel.fr/pub/generateurs/img/1.png">
+                        </div>
+                        <div>
+                            <label for="link-uge">Lien Gustave Eiffel :</label>
+                            <input type="text" name="link-uge" id="link-uge" class="event-target" value="https://www.univ-gustave-eiffel.fr">
+                        </div>
                     </div>
                 </details>
-            </div> -->
+            </div>
         </form>
         <div class="view">
             <div></div>
@@ -168,7 +192,7 @@
 <td class="paragraph-block__content" style="padding: 25px 0 18px 0; font-size: 16px; line-height: 27px; color: #444444;" align="left">
 <div><img id="view-img-main" src="" style="width: 620px;" /></div>
 <div></div>
-<div><span id="view-text"></span></div>
+<div><span id="view-editor"></span></div>
 </td>
 </tr>
 <tr>
@@ -209,8 +233,9 @@
 <tr>
 <td>
 <h2 style="text-align: center; margin-top: 5%; margin-bottom: 4%;">Pour en savoir plus</h2>
-<div><img id="view-img-macaron" alt="" style="width: 15%; float: left;" dfsrc="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg" src="https://s3.fr-par.scw.cloud/rdg-portal/logos-macarons/Macarons%20Recherche%20Data%20Gouv_Ateliers%20de%20la%20donn%C3%A9e.jpg" saveddisplaymode="" />
-<p style="padding-top: 3%;" id="view-textplus"><br /><span class="Object" id="OBJ_PREFIX_DWT614_com_zimbra_url"><span class="Object" id="OBJ_PREFIX_DWT623_com_zimbra_url"><span class="Object" role="link" id="OBJ_PREFIX_DWT259_com_zimbra_url"><span class="Object" role="link" id="OBJ_PREFIX_DWT268_com_zimbra_url"><a id="view-linkplus" href="" target="_blank" rel="noopener"></a></span></span></span></span></p>
+<div><img id="view-imgmacaron" src="" style="width: 15%; float: left;"  saveddisplaymode="" />
+<p style="padding-top: 3%;" ><span id="view-textplus"></span><br />
+        <a id="view-linkplus" href=""><span id="view-plus-textlink"></span></a></p>
 </div>
 </td>
 </tr>
@@ -236,7 +261,7 @@
 <tbody>
 <tr>
 <td class="info-bullets__content"><hr style="height: 4px; background-color: #2f2a85;" size="4px" color="#2F2A85" /><footer style="padding-top: 4%;">
-<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0px; gap: 45px;"><a href="https://www.enseignementsup-recherche.gouv.fr/"><img src="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2022-05/1_MESR_RVB.svg" alt="" style="width: 100px;" /></a> <a href="https://recherche.data.gouv.fr/fr"><img src="https://s3.fr-par.scw.cloud/rdg-portal/logos-centres-ressources/recherche-data-gouv.png" alt="" style="height: 46px; width: auto;" /></a> <a href="https://www.ouvrirlascience.fr/"><img src="https://www.ouvrirlascience.fr/wp-content/themes/coso2021/images/logo-noir-2022.svg" alt="" style="width: 100px;" /></a> <a href="https://www.univ-gustave-eiffel.fr/"><img src="https://outicom.univ-eiffel.fr/pub/generateurs/img/1.png" alt="" style="width: 100px;" /></a></div>
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; padding: 0px; gap: 45px;"><a id="view-link-mesr"><img id="view-img-mesr" alt="" style="width: 100px;" /></a> <a id="view-link-rdg" ><img id="view-img-rdg"  alt="" style="height: 46px; width: auto;" /></a> <a id="view-link-ols" ><img id="view-img-ols"  alt="" style="width: 100px;" /></a> <a id="view-link-uge" ><img id="view-img-uge"  alt="" style="width: 100px;" /></a></div>
 </footer></td>
 </tr>
 </tbody>

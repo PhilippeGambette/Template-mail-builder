@@ -1,15 +1,12 @@
 //initialisation de quill
 var options = {
-    placeholder: "Compose an epic...",
+    value: "Compose an epic...",
     theme: "snow",
 };
 var editor = new Quill("#editor", options);
 
 //création de champs pour chaque intervenants
-const containerAll = document.querySelector(".intervenants");
-const nbInterv = document.getElementById("nbInterv");
-let containers = [];
-nbInterv.addEventListener("change", () => {
+modifNbInterv = () => {
     for (let i = 0; i < nbInterv.value; i++) {
         if (document.querySelector(".intervenant" + i) === null) {
             let newInterv =
@@ -27,7 +24,7 @@ nbInterv.addEventListener("change", () => {
                 i +
                 `" id="nom` +
                 i +
-                `" placeholder="Arthur">
+                `" value="Aubin Sahalor">
             </div>
             <div>
                 <label for="linknom` +
@@ -37,7 +34,7 @@ nbInterv.addEventListener("change", () => {
                 i +
                 `" id="linknom` +
                 i +
-                `" placeholder="https://annuaire.fr/page-">
+                `" value="https://pagespro.univ-gustave-eiffel.fr/">
             </div>
             <div>
                 <label for="fonction` +
@@ -109,22 +106,35 @@ nbInterv.addEventListener("change", () => {
                 container.style.display = "block";
             }
         });
-});
+};
+const containerAll = document.querySelector(".intervenants");
+const nbInterv = document.getElementById("nbInterv");
+nbInterv.addEventListener("change", modifNbInterv);
 
 modifField = (e) => {
     modifTemplate(e.target.id);
 };
 
 modifFields = () => {
+    modifNbInterv();
+    document
+        .querySelectorAll(".intervenant input,textarea")
+        .forEach((element) => {
+            element.dispatchEvent(new KeyboardEvent("keyup", { key: "" }));
+        });
     document.querySelectorAll(".event-target").forEach((field) => {
         modifTemplate(field.id);
     });
 };
 
 modifTemplate = (id) => {
-    /* e.preventDefault(); */ /* 
-    console.log(id); */
-    let valeur = document.getElementById(id).value;
+    let valeur;
+    if (id == "") {
+        valeur = document.querySelector("#editor .ql-editor").innerHTML;
+    } else {
+        valeur = document.getElementById(id).value;
+    }
+
     let stringAdd = valeur;
 
     //cas particuliers :
@@ -159,6 +169,10 @@ modifTemplate = (id) => {
     else if (id.substring(0, 3) === "img") {
         document.getElementById("view-" + id).src = valeur;
     }
+    //quill editor
+    else if (id === "") {
+        document.getElementById("view-editor").innerHTML = valeur;
+    }
     //cas général
     else {
         document.querySelector("#view-" + id).innerHTML = stringAdd;
@@ -166,11 +180,13 @@ modifTemplate = (id) => {
 };
 
 window.addEventListener("load", modifFields);
-//récupération des valeurs des champs au clique du bouton
+//récupération des valeurs des champs à chaque changement
 document.querySelectorAll(".event-target").forEach((input) => {
     input.addEventListener("keyup", modifField);
     input.addEventListener("change", modifField);
 });
+document.getElementById("editor").addEventListener("keyup", modifField);
+document.getElementById("editor").addEventListener("click", modifField);
 
 //bouton copier
 let view = document.querySelector(".view");
