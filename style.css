@@ -3,6 +3,7 @@ body{
     padding: 0;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
+
 h1{
     text-align: center;
     color: white;
@@ -11,10 +12,12 @@ h1{
     margin: 0;
     padding: 10px;
 }
+
 main{
     display: grid;
     grid-template-columns: 30vw 1fr;
 }
+
 form {
     padding: 1em;
     background-color: #ddd;
@@ -54,18 +57,30 @@ button {
     margin-left: .5em;
 }
 
-.copy{
+.copy-button{
 	position: fixed;
 	bottom: 20px;
 	right: 20px;
 	padding: 5px 7px;
+    font-weight: bold;
+    background-color: #E83583;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
 }
+
 footer.footer {
 	text-align: center;
     color: white;
     background-color: #2F2A85;
 	padding: 20px;
 }
+
 footer h2{
 	margin: 0;
+}
+
+#editor{
+    height: 200px;
+    background-color: #fff;
 }

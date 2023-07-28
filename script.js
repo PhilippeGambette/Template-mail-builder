@@ -1,3 +1,10 @@
+//initialisation de quill
+var options = {
+    placeholder: "Compose an epic...",
+    theme: "snow",
+};
+var editor = new Quill("#editor", options);
+
 //création de champs pour chaque intervenants
 const containerAll = document.querySelector(".intervenants");
 const nbInterv = document.getElementById("nbInterv");
@@ -75,6 +82,18 @@ nbInterv.addEventListener("change", () => {
                 document
                     .querySelector("#nom" + index)
                     .addEventListener("change", modifField);
+                document
+                    .querySelector("#linknom" + index)
+                    .addEventListener("keyup", modifField);
+                document
+                    .querySelector("#linknom" + index)
+                    .addEventListener("change", modifField);
+                document
+                    .querySelector("#fonction" + index)
+                    .addEventListener("keyup", modifField);
+                document
+                    .querySelector("#fonction" + index)
+                    .addEventListener("change", modifField);
             }
         });
     //masquage et affichage des éléments dans le corps du mail
@@ -92,23 +111,8 @@ nbInterv.addEventListener("change", () => {
         });
 });
 
-testId = (id) => {
-    let debut = "";
-    for (let i = 0; i < 4; i++) {
-        debut += id[i];
-    }
-    if (debut === "link") {
-        return true;
-    } else {
-        return false;
-    }
-};
-
 modifField = (e) => {
     modifTemplate(e.target.id);
-    if (e.target.id === "nom1") {
-        console.log("ça appele la fonction");
-    }
 };
 
 modifFields = () => {
@@ -169,11 +173,11 @@ document.querySelectorAll(".event-target").forEach((input) => {
 });
 
 //bouton copier
-/* let editor = document.querySelector(".view");
-let button = document.querySelector("button");
+let view = document.querySelector(".view");
+let button = document.querySelector(".copy-button");
 
 button.addEventListener("click", () => {
-    navigator.clipboard.writeText(editor);
+    console.log("ça copie");
+    navigator.clipboard.writeText(view.innerHTML);
     button.innerText = "Copié !";
 });
- */
