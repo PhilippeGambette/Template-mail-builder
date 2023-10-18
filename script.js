@@ -5,11 +5,11 @@ var options = {
 };
 var editor = new Quill("#editor", options);
 
-//création de champs pour chaque intervenants
+//création de champs pour chaque intervenant
 modifNbInterv = () => {
     for (let i = 0; i < nbInterv.value; i++) {
         if (document.querySelector(".intervenant" + i) === null) {
-            let newInterv =
+            let newIntervHTML =
                 `<div class="intervenant` +
                 i +
                 ` intervContainer">
@@ -20,7 +20,7 @@ modifNbInterv = () => {
                 <label for="nom` +
                 i +
                 `">Prénom - Nom:</label>
-                <input type="text" name="nom` +
+                <input type="text" class="event-target" name="nom` +
                 i +
                 `" id="nom` +
                 i +
@@ -30,7 +30,7 @@ modifNbInterv = () => {
                 <label for="linknom` +
                 i +
                 `">Lien vers la fiche annuaire :</label>
-                <input type="text" name="linknom` +
+                <input type="text" class="event-target" name="linknom` +
                 i +
                 `" id="linknom` +
                 i +
@@ -47,7 +47,10 @@ modifNbInterv = () => {
                 `" cols="30" rows="10"></textarea>
             </div>
             </div>`;
-            containerAll.innerHTML += newInterv;
+
+            let newInterv = document.createElement("div");
+            containerAll.appendChild(newInterv);
+            newInterv.outerHTML = newIntervHTML;
 
             let newIntervView =
                 `<div style="text-align: center; width: 33%;"><img src="http://besombes.butmmi.o2switch.site/rdv_data_dsos/icon.svg" alt="" />
@@ -70,7 +73,7 @@ modifNbInterv = () => {
             if (index >= nbInterv.value) {
                 container.style.display = "none";
             }
-            //réafichage les champs en plus
+            //réaffichage les champs en plus
             if (index < nbInterv.value) {
                 container.style.display = "block";
                 document
@@ -101,15 +104,12 @@ modifNbInterv = () => {
             if (index >= nbInterv.value) {
                 container.style.display = "none";
             }
-            //réafichage les champs en plus
+            //réaffichage des champs en plus
             if (index < nbInterv.value) {
                 container.style.display = "block";
             }
         });
 };
-const containerAll = document.querySelector(".intervenants");
-const nbInterv = document.getElementById("nbInterv");
-nbInterv.addEventListener("change", modifNbInterv);
 
 modifField = (e) => {
     modifTemplate(e.target.id);
@@ -126,6 +126,10 @@ modifFields = () => {
         modifTemplate(field.id);
     });
 };
+
+const containerAll = document.querySelector(".intervenants");
+const nbInterv = document.getElementById("nbInterv");
+nbInterv.addEventListener("change", modifFields);
 
 modifTemplate = (id) => {
     let valeur;
@@ -180,6 +184,7 @@ modifTemplate = (id) => {
 };
 
 window.addEventListener("load", modifFields);
+
 //récupération des valeurs des champs à chaque changement
 document.querySelectorAll(".event-target").forEach((input) => {
     input.addEventListener("keyup", modifField);
@@ -193,7 +198,6 @@ let view = document.querySelector(".view");
 let button = document.querySelector(".copy-button");
 
 button.addEventListener("click", () => {
-    console.log("ça copie");
     navigator.clipboard.writeText(view.innerHTML);
     button.innerText = "Copié !";
 });
