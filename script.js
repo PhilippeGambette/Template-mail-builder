@@ -53,7 +53,7 @@ modifNbInterv = () => {
             newInterv.outerHTML = newIntervHTML;
 
             let newIntervView =
-                `<div style="text-align: center; width: 33%;"><img src="https://perso-etudiant.u-pem.fr/~gambette/DataUnivEiffel/icon.svg" alt="" />
+                `<div style="text-align: center; width: 33%;"><img src="https://perso-etudiant.u-pem.fr/~gambette/DataUnivEiffel/icon-perso.png" alt="" />
             <p><strong> <a href="" id="view-linknom` +
                 i +
                 `"><span id="view-nom` +
